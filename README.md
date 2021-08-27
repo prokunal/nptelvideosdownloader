@@ -4,7 +4,7 @@
 <ul>
   <li>pip3 install -r requirements.txt</li>
   </ul>
-  <p>This script help you to download the all videos of a specific course with the help of 4 threading</p>
+  <p>This script help you to download the all videos of a specific course with the help of 4 threadings</p>
   <p>Steps to follow:</p>
   <p>Step 1: first goto https://swayam.gov.in/ and login after that goto mycourses tab</p>
   <p>Step 2: Click on any course</p>
