@@ -11,7 +11,10 @@
   <p>Step 3: Now, click on <b>Video Download</b> option on bottom left</p>
   <p>Step 4: by click on Video Download button, you will redirect to nptel.ac.in</p>
   <p>Step 5: copy the link</p>
-  <p>Step 6: in terminal: $ python3 nptel_videos_downloader.py course_link</p>
+  <p>Step 6: in terminal: <b>$ python3 nptel_videos_downloader.py course_link</b></p>
   <p>Step 7: hit enter, and wait for the download</p>
-
+<h1>Author</h1>
+<ul>
+  <li><a href="https://twitter.com/pr0kunal">Kunal Kumar</a></li>
+  </ul>
   
