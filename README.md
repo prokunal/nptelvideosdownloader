@@ -13,6 +13,8 @@
   <p>Step 5: copy the link</p>
   <p>Step 6: in terminal: <b>$ python3 nptel_videos_downloader.py course_link</b></p>
   <p>Step 7: hit enter, and wait for the download</p>
+   <h1>Image<h1>
+       <img src="https://i.ibb.co/2MtBpnm/Screenshot-2021-08-27-17-37-44.png"/>
 <h1>Author</h1>
 <ul>
   <li><a href="https://twitter.com/pr0kunal">Kunal Kumar</a></li>
