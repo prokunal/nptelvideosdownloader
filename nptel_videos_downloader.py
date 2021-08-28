@@ -45,7 +45,7 @@ for i in links:
   size = urllib.request.urlopen(i)
   size_count = size.length + size_count
 
-print("Total size of all files in MB is %.2f and in GB %.2f"%(size_count/1024/1024,size_count/1024/1024/1024))
+print("Total size of all files in MB is %.2f mb and in GB %.2f gb."%(size_count/1024/1024,size_count/1024/1024/1024))
 def bar_progress(current, total, width=80):
   progress_message = "Downloading: %d%% [%.2f / %.2f] mb " % (current / total * 100/1024/1024, current/1024/1024, total/1024/1024)
   sys.stdout.write("\r" + progress_message)
