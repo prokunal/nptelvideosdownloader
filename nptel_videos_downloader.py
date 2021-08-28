@@ -62,7 +62,7 @@ def downloader4():
     for i in link4:
       filename = wget.download(i,bar=bar_progress)
       print(filename + " Downloaded")
-print("All Video got Downloaded :)")        
+
 t1 = threading.Thread(target=downloader1, name='d1')
 t2 = threading.Thread(target=downloader2,name='d2')
 t3 = threading.Thread(target=downloader3, name='d3')
