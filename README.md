@@ -6,13 +6,12 @@
   </ul>
   <p>This script help you to download the all videos of a specific course with the help of 4 threadings</p>
   <p>Steps to follow:</p>
-  <p>Step 1: first goto https://swayam.gov.in/ and login after that goto mycourses tab</p>
+  <p>Step 1: first goto https://nptel.ac.in/ and select NPTEL Courses from Courses menu.</p>
   <p>Step 2: Click on any course</p>
-  <p>Step 3: Now, click on <b>Video Download</b> option on bottom left</p>
-  <p>Step 4: by clicking on Video Download button, you will redirect to nptel.ac.in/xxx/xxx/xxxxxxx</p>
-  <p>Step 5: copy the link</p>
-  <p>Step 6: in terminal: <b>$ python3 nptel_videos_downloader.py course_link</b></p>
+  <p>Step 5: copy the link e.g: https://nptel.ac.in/courses/128/108/128108016/</p>
+  <p>Step 6: in terminal: <b>$ python3 nptel_videos_downloader.py https://nptel.ac.in/courses/128/108/128108016/</b></p>
   <p>Step 7: hit enter, and wait for the download</p>
+    <p><b>Note:</b> Script will not work, if selected course have not download facility, but most of them are download facility.</p>
    <h1>Image<h1>
        <img src="https://i.ibb.co/2MtBpnm/Screenshot-2021-08-27-17-37-44.png"/>
 <h1>Author</h1>
