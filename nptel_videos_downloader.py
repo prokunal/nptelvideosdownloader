@@ -5,7 +5,7 @@ import os,sys,wget,urllib.request,threading
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 
-
+print("fetching links to download...")
 prefix = "https://nptel.ac.in"
 course_link = sys.argv[1]
 req = Request(course_link)
@@ -42,10 +42,13 @@ size_count = 0
 print("Calculating Total size of all files, it may take upto 1 minute...")
 
 for i in links:
-  size = urllib.request.urlopen(i)
-  size_count = size.length + size_count
-
-print("Total size of all files in MB is %.2f mb and in GB %.2f gb."%(size_count/1024/1024,size_count/1024/1024/1024))
+  try:
+    size = urllib.request.urlopen(i)
+    size_count = size.length + size_count
+  except:
+    print("this link may have been moved: ",i)
+    links.remove(i)
+print("Total size of all files in MB is %.2fMB and in GB %.2fGB."%(size_count/1024/1024,size_count/1024/1024/1024))
 def bar_progress(current, total, width=80):
   progress_message = "Downloading: %d%% [%.2f / %.2f] mb " % (current / total * 100/1024/1024, current/1024/1024, total/1024/1024)
   sys.stdout.write("\r" + progress_message)
