@@ -4,7 +4,7 @@
 <ul>
   <li>pip3 install -r requirements.txt</li>
   </ul>
-  <p>This script help you to download the all videos of a specific course with the help of 4 threadings</p>
+  <p>This script help you to download the all videos of a specific course with the help of 4 threadings in faster way.</p>
   <p>Steps to follow:</p>
   <p>Step 1: first goto https://nptel.ac.in/ and select NPTEL Courses from Courses menu.</p>
   <p>Step 2: Click on any course</p>
