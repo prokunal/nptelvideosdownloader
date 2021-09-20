@@ -4,6 +4,7 @@
 import os,sys,wget,urllib.request,threading
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
+from math import ceil
 
 print("fetching links to download...")
 prefix = "https://nptel.ac.in"
@@ -31,7 +32,7 @@ for i in range(1,10,1):
 if len(links) == 0:
   print("All Videos are Downloaded Already :)")
   exit(0)
-l1 = round(len(links)/4)
+l1 = ceil(len(links)/4)
 
 link1 = links[0:l1]
 link2 = links[l1:l1+l1]
