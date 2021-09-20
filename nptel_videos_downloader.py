@@ -50,7 +50,7 @@ for i in links:
     links.remove(i)
 print("Total size of all files in MB is %.2fMB and in GB %.2fGB."%(size_count/1024/1024,size_count/1024/1024/1024))
 def bar_progress(current, total, width=80):
-    progress_message =  "Downloading: %d%% [%d MB / %d MB] bytes" % (current / total * 100, current/1024/1024, total/1024/1024)
+    progress_message =  "Downloading: %d%% [%d MB / %d MB] " % (current / total * 100, current/1024/1024, total/1024/1024)
     sys.stdout.write("\r" + progress_message)
     sys.stdout.flush()
 
