@@ -13,7 +13,7 @@
   <p>Step 7: hit enter, and wait for the download</p>
     <p><b>Note:</b> Script will not work, if selected course have not download videos facility, but most of them are download facility.</p>
    <h1>Image<h1>
-       <img src="https://i.ibb.co/2MtBpnm/Screenshot-2021-08-27-17-37-44.png"/>
+       <img src="https://i.ibb.co/K9FDmbm/proof-nptel.png"/>
 <h1>Author</h1>
 <ul>
   <li><a href="https://twitter.com/pr0kunal">Kunal Kumar</a></li>
