@@ -1,5 +1,5 @@
 # Author: Kunal Kumar
-# Social: twitter.com/pr0kunal, instagram.com/prokunal
+# Social: twitter.com/l1v1n9h311, instagram.com/prokunal
 
 import os,sys,wget,urllib.request,threading
 from bs4 import BeautifulSoup
