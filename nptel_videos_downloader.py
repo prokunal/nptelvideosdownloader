@@ -1,27 +1,47 @@
 # Author: Kunal Kumar
 # Social: twitter.com/l1v1n9h311, instagram.com/prokunal
 
-import os,sys,wget,urllib.request,threading
-from bs4 import BeautifulSoup
-from urllib.request import Request, urlopen
+import os,sys,wget,threading,urllib.request
 from math import ceil
-
+import requests,json
+from urllib.request import Request, urlopen
 print("fetching links to download...")
-prefix = "https://nptel.ac.in"
-course_link = sys.argv[1]
-req = Request(course_link)
-html_page = urlopen(req)
-soup = BeautifulSoup(html_page,"lxml")
-temp_links = []
+try:
+    prefix = "https://tools.nptel.ac.in/npteldata/downloads.php?id={}".format(sys.argv[1].split('/')[-1])
+    r = requests.get(prefix)
+    flinks = json.loads(r.text)
+except:
+    print("python3 ",__file__.split('/')[-1]," course_link --videos")
+    print("python3 ",__file__.split('/')[1],"course_link --assignments")
+    sys.exit(0)
+def video_downloader(flinks):
+    links = []
+    for i in flinks['data']['course_downloads']:
+        links.append(i['url'])
+    links = set(links)
+    links = list(links)
+    links.sort()
+    return links
 
-for link in soup.findAll('a'):
-  temp_links.append(link.get('href'))
-
-links = []
-for i in temp_links:
-  if i.endswith('.mp4') or i.endswith('.MP4') or i.endswith('.mP4') or i.endswith('.Mp4'):
-    links.append(prefix+i)
-
+def assignments_downloader(flinks):
+    links = []
+    print(flinks)
+    for i in flinks['data']['assignments']:
+        links.append(i['url'])
+    links = set(links)
+    links = list(links)
+    links.sort()
+    return links
+try:
+    if sys.argv[2] == '--videos':
+        links = video_downloader(flinks)
+    elif sys.argv[2] == '--assignments':
+        links = assignments_downloader(flinks)
+    else:
+        print("python3 ",__file__.split('/')[-1]," course_link --videos/--assignments")
+        sys.exit(0)
+except:
+    pass
 tmp_link = links
 _dir = os.listdir(".")
 
@@ -82,8 +102,3 @@ t1.start()
 t2.start()
 t3.start()
 t4.start()
-
-
-
-
-
