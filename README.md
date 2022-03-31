@@ -9,7 +9,7 @@
   <p>Step 1: first goto https://nptel.ac.in/ and select NPTEL Courses from Courses menu.</p>
   <p>Step 2: Click on any course</p>
   <p>Step 5: copy the link. e.g: https://nptel.ac.in/courses/128/108/128108016/</p>
-  <p>Step 6: in terminal: <b>$ python3 nptel_videos_downloader.py https://nptel.ac.in/courses/128/108/128108016/</b></p>
+  <p>Step 6: in terminal: <b>$ python3 nptel_videos_downloader.py https://nptel.ac.in/courses/128108016/ --videos/--assignments</b></p>
   <p>Step 7: hit enter, and wait for the download</p>
     <p><b>Note:</b> Script will not work, if selected course have not download videos facility, but most of them are download facility.</p>
    <h1>Image<h1>
