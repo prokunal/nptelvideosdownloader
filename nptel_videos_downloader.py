@@ -52,12 +52,13 @@ for i in range(1,10,1):
 if len(links) == 0:
   print("All Videos are Downloaded Already :)")
   exit(0)
-l1 = ceil(len(links)/4)
 
-link1 = links[0:l1]
-link2 = links[l1:l1+l1]
-link3 = links[l1+l1:l1+l1+l1]
-link4 = links[l1+l1+l1:l1+l1+l1+l1]
+def split(links,size):
+    for i in range(0,len(links),size):
+        yield [i:i+size]
+      
+size = ceil(len(links)/4)
+link = list(split(links,size))
 
 size_count = 0
 print("Calculating Total size of all files, it may take upto 1 minute...")
@@ -76,22 +77,22 @@ def bar_progress(current, total, width=80):
     sys.stdout.flush()
 
 def downloader1():
-    for i in link1:
+    for i in link[0]:
       filename = wget.download(i,bar=bar_progress)
       print(filename+ " Downloaded")
 
 def downloader2():
-    for i in link2:
+    for i in link[1]:
       filename = wget.download(i,bar=bar_progress)
       print(filename + " Downloaded")
 
 def downloader3():
-    for i in link3:
+    for i in link[2]:
       filename = wget.download(i,bar=bar_progress)
       print(filename+ " Downloaded")
 
 def downloader4():
-    for i in link4:
+    for i in link[3]:
       filename = wget.download(i,bar=bar_progress)
       print(filename + " Downloaded")        
 t1 = threading.Thread(target=downloader1, name='d1')
