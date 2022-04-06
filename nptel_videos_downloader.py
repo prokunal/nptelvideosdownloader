@@ -79,22 +79,22 @@ def bar_progress(current, total, width=80):
 def downloader1():
     for i in link[0]:
       filename = wget.download(i,bar=bar_progress)
-      print(filename+ " Downloaded")
+      print("threading 1 -> " + filename + " Downloaded")
 
 def downloader2():
     for i in link[1]:
       filename = wget.download(i,bar=bar_progress)
-      print(filename + " Downloaded")
+      print("threading 2 -> " + filename + " Downloaded")
 
 def downloader3():
     for i in link[2]:
       filename = wget.download(i,bar=bar_progress)
-      print(filename+ " Downloaded")
+      print("threading 3 -> " + filename + " Downloaded")
 
 def downloader4():
     for i in link[3]:
       filename = wget.download(i,bar=bar_progress)
-      print(filename + " Downloaded")        
+      print("threading 4 -> " + filename + " Downloaded")        
 t1 = threading.Thread(target=downloader1, name='d1')
 t2 = threading.Thread(target=downloader2,name='d2')
 t3 = threading.Thread(target=downloader3, name='d3')
