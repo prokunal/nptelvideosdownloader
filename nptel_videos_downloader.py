@@ -55,7 +55,7 @@ if len(links) == 0:
 
 def split(links,size):
     for i in range(0,len(links),size):
-        yield [i:i+size]
+        yield links[i:i+size]
       
 size = ceil(len(links)/4)
 link = list(split(links,size))
