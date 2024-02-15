@@ -1,3 +1,4 @@
+<h2>This script is not working longer, try version 2 of the <b>nptelvideosdownloader</b> https://github.com/prokunal/nptelvideosdownloaderv2</h2>
 <h1>Mass Video Downloader of NPTEL courses<h1>
     <h1>Usage</h1>
   <p>First install all require modules</p>
